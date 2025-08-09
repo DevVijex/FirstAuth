@@ -60,7 +60,7 @@ const carSchema = new mongoose.Schema({
         default: null
     },
     isRented: {
-        type: Boolean,
+        type: String,
         trim: false
     }
 }, {

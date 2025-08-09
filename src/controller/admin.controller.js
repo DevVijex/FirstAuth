@@ -47,7 +47,7 @@ const editCar = async (req, res) => {
     if (!car) {
       return res.status(404).json({ message: "Car not found" });
     }
-// Update car details
+    // Update car details
     car.make = make || car.make;
     car.model = model || car.model;
     car.year = year || car.year;

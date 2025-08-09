@@ -52,6 +52,9 @@ const signup = async (req, res) => {
     });
     await newUser.save();
 
+    // //Send Email
+    //   await sendEmail(email, "Welcome to Our Service", Hello ${name}, for signing up!)
+
     // Send Welcome Email with Template
     const welcomeTemplate = emailTemplates.welcomeTemplate(name, emailToken);
     await sendTemplateEmail(
