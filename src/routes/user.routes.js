@@ -35,10 +35,10 @@ router.get('/google/callback', handleGoogleCallback);
 router.delete('/unlink-google/:userId', isAuth, unlinkGoogle);
 router.post('/set-password/:userId', isAuth, setPasswordForGoogleUser);
 
-// Profile management routes (protected)
-//router.get('/profile', isAuth, getUserProfile);
-//router.put('/profile', isAuth, updateProfile);
-//router.post('/profile/picture', isAuth, upload.single('profilePicture'), uploadProfilePicture);
-//router.delete('/profile/picture', isAuth, deleteProfilePicture);
+//Profile management routes (protected)
+router.get('/profile', isAuth, getUserProfile);
+router.put('/profile', isAuth, updateProfile);
+router.post('/profile/picture', isAuth, upload.single('profilePicture'), uploadProfilePicture);
+router.delete('/profile/picture', isAuth, deleteProfilePicture);
 
 module.exports = router;
