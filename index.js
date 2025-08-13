@@ -21,7 +21,6 @@ app.use('/api/users', userRouter);
 app.use('/api/cars', carRouter);
 app.use('/api/webhook', flwRoute);
 
-
 app.listen(PORT, ()=> {
     connectDB()
     console.log(`Server is running on http://localhost:${PORT}`)
